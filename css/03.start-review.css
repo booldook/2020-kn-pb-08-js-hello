@@ -1,0 +1,8 @@
+.wrapper {max-width: 800px; margin: auto; padding: 16px;}
+.title {font-size: 32px; padding: 16px 0;}
+input {border: 1px solid #aaa; padding: 8px; font-size: 24px; width: 100px;}
+button {border: none; padding: 7px 16px; font-size: 24px; background: #000; 
+	color: #fff;}
+button:hover {background: #ccc; color: #000;}
+#btReset {background: darkred;}
+#btReset:hover {background: yellowgreen;}
