@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>자바스크립트</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/01.hello.css">
+</head>
+<body>
+	<div class="wrapper">
+		<h1>1. 브라우저 내장함수</h1>
+		<button onclick="alert('Hello World');">눌러봐</button>
+		<button onclick="confirm('Hello World');">눌러봐2</button>
+		<button onclick="prompt('2 + 2 = ?');">눌러봐3</button>
+	</div>
+	<div class="wrapper">
+		<h1>2. 사용자 함수</h1>
+		<div id="box"></div>
+		<button id="bt1">눌러봐1</button>
+		<button id="bt2">눌러봐2</button>
+		<button id="bt3">눌러봐3</button>
+		<button id="bt4">눌러봐4</button>
+		<!-- bt3을 클릭하면 width가 400px -->
+		<!-- bt4를 클릭하면 width가 200px -->
+	</div>
+	<script>
+		document.getElementById("bt1").addEventListener("click", function(){
+			document.getElementById("box").style.backgroundColor = "blue";
+		})
+		document.getElementById("bt2").addEventListener("click", function(){
+			document.getElementById("box").style.backgroundColor = "yellowgreen";
+		})
+		document.getElementById("bt3").addEventListener("click", function(){
+			document.getElementById("box").style.width = "400px";
+		})
+		document.getElementById("bt4").addEventListener("click", function(){
+			document.getElementById("box").style.width = "200px";
+		})
+	</script>
+</body>
+</html>
