@@ -1,0 +1,35 @@
+<script>
+	var a = 10;
+	var b = 20;
+	var c = 0;
+	a = 30;
+	b = 50;
+
+	// 1. void형 - 돌려주는값(return값)이 없는 함수
+	function voidSample() {
+		c = a + b;
+	}
+	c = voidSample();
+	console.log(c);
+
+	// 2. return형 - 돌려주는값이 있는 함수 (return 이후는 실행하지 않는다. 함수가 종결된다.)
+	function returnSample() {
+		console.log("함수가 실행되었습니다.");
+		return a + b;
+		console.log("함수가 종결되었습니다."); //이건 실행 안됨
+	}
+	c = returnSample();
+	console.log(c);
+
+	// 3. 인자(매개변수, parameter, argument)가 있는 함수
+	function paramSample(a, b) {
+		return a + b;
+	}
+	c = paramSample(30, 40);
+	console.log(c);
+
+	// 4. 콜백(callback)함수
+	document.addEventListener("click", function(){
+		alert("hi~");
+	});
+</script>
