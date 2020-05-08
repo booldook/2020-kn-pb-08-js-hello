@@ -17,5 +17,32 @@
 		<div class="box" id="box4"></div>
 		<div class="box" id="box5"></div>
 	</div>
+	<div class="bts">
+		<button id="btChg">변해라</button>
+		<button id="btReset">원래대로</button>
+	</div>
+	<script>
+		document.getElementById("box1").addEventListener("click", function(){
+			this.style.backgroundColor = "#f00";
+		});
+
+		$("#box2").click(function(){
+			$(this).css("background-color", "blue");
+		});
+
+		$("#box3").click(function(){
+			$(this).css("width", "10%");
+		});
+
+		$("#btChg").click(function(){
+			$("#box4").stop().fadeOut(1000);
+			$("#box5").stop().slideUp(1000);
+		});
+
+		$("#btReset").click(function(){
+			$("#box4").stop().fadeIn(1000);
+			$("#box5").stop().slideDown(1000);
+		});
+	</script>
 </body>
 </html>
