@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>반복문(for)</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<script src="../js/jquery-3.5.1.min.js"></script>
+	<style>
+		.box {width: 3vw; height: 3vh; border: 1px solid orange; background-color: red; float: left; transition: all 2s;}
+		.bts {text-align: center;}
+		.bts button {border: none; background-color: black; color: #fff; 
+			padding: 12px 16px;; margin: 8px;}
+	</style>
+</head>
+<body>
+	<div class="bts">
+		<button id="btMake">만들기</button>
+		<button id="btReset">삭제하기</button>
+	</div>
+	<div class="wrapper"></div>
+	<script>
+		$("#btMake").click(function(){
+			for(var i=0; i<100; i++) {
+				$(".wrapper").append('<div class="box"></div>');
+			}
+			$(".box").mouseover(function(){
+				$(this).css("background-color", "orange");
+			});
+		});
+		
+		$("#btReset").click(function(){
+			$(".box").remove();
+		});
+		/*
+		for(var i=0; i<=1000; i++) {
+			$(".wrapper").append('<div class="box"></div>');
+		}
+		$(".box").mouseover(function(){
+			$(this).css("background-color", "orange");
+		});
+		*/
+		/*
+		$(".box").hover(function(){
+			$(this).fadeOut(1000);
+		}, function(){
+			$(this).fadeIn(1000);
+		});
+		*/
+
+
+
+		//for(초기값; 조건; 증가값) {}
+		var sum = 0;
+		for(var i=1; i<=100; i++){
+			sum = sum + i;
+		}
+		console.log(sum);
+	</script>
+</body>
+</html>

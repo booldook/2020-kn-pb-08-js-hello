@@ -4,27 +4,72 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>제어문(if)</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<script src="../js/jquery-3.5.1.min.js"></script>
+	<style>
+		form {width: 300px; padding: 24px; margin: 200px auto; border: 2px solid #aaa; border-radius: 8px;}
+		input {display: block; width: 100%; padding: 8px; margin: 4px 0;}
+		button {padding: 12px 16px; background-color: black; color: #fff; border: none;}
+		.wrapper {max-width: 1200px; margin: 100px auto;}
+		.box {width: 30.3333%; margin: 0 1.5%; height: 100px; float: left;}
+		#box1 {background-color: red;}
+		#box2 {background-color: green;}
+		#box3 {background-color: blue;}
+	</style>
 </head>
 <body>
-	
+	<div class="wrapper clear">
+		<div class="box" id="box1"></div>
+		<div class="box" id="box2"></div>
+		<div class="box" id="box3"></div>
+	</div>
+	<form action="#" onsubmit="return false;">
+		<input type="text" id="userid" name="userid" placeholder="아이디">
+		<input type="text" id="userpw" name="userpw" placeholder="패스워드">
+		<button id="btSend" type="submit">로그인</button>
+	</form>
 	<script>
+		$(".box").click(function(){
+			var height = $(this).css("height");
+			if(height == "100px") {
+				$(this).css("height", "200px");
+			}
+			else {
+				$(this).css("height", "100px");
+			}
+		});
+
+
+		// document.getElementById("btSend").addEventListener("click", function(){});
+		$("#btSend").click(function(){
+			var userid = $("#userid").val();
+			var userpw = $("#userpw").val();
+			if(userid == "") {
+				alert("아이디를 입력하세요.");
+			}
+			if(userpw == "") {
+				alert("패스워드를 입력하세요.");
+			}
+		});
+
+
+
+
 		// if조건문이 거짓인경우: false, 0, null, undefined
 		if(undefined) {
 			console.log("참");
 		}
-		else {
-			console.log("거짓");
-		}
+		
 
+		/*
 		var result = prompt("B를 입력하세요.");
 		if(result == "B") {
 			alert("잘 입력하셨습니다.");
 		}
 		else {
-			alert("다시 도전해 보세요."); 
+			alert("다시 도전해 보세요.");
 		}
-
-		
+		*/
 	</script>
 </body>
 </html>
