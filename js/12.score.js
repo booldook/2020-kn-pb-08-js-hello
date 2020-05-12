@@ -9,7 +9,11 @@ arr[1] = {
 }
 console.log(arr);
 
-var name = "홍길동";
+var name = '홍길동';
+var hello = '안녕하세요 저는 "' + name + '" 입니다.';
+console.log(hello);
+
+
 
 /* 변수선언 */
 var std = [];
