@@ -1,0 +1,18 @@
+.wrapper {max-width: 1200px; margin: 0 auto;}
+.header {padding: 50px; background-color: #333; color: #fff;}
+.header > h1 {font-weight: normal;}
+
+.score-form {margin: 24px 0; border: 1px solid #999; padding: 8px;}
+.score-form > input {padding: 8px; font-size: 18px; border: 1px solid #eee;}
+.score-form > :nth-child(1) {width: 120px;}
+.score-form > :nth-child(2) {width: 70px;}
+.score-form > :nth-child(3) {width: 70px;}
+.score-form > :nth-child(4) {width: 70px;}
+.score-form > button {padding: 6px 12px; font-size: 18px; border: none; color: #fff; cursor: pointer;}
+.score-form > :nth-child(5) {background-color: #136180;}
+.score-form > :nth-child(6) {background-color: #b34f16;}
+
+.score-tb {width: 100%; border: 1px solid #999;}
+.score-tb > thead {background-color: #333; color: #fff;}
+.score-tb th, .score-tb td {padding: 12px 4px; text-align: center;}
+.score-tb th:not(:nth-child(2)) {width: 14%;}
