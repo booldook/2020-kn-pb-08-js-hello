@@ -1,0 +1,61 @@
+<script>
+var hong = {
+	fname: "길동",
+	lname: "홍",
+	kor: 95,
+	math: 85,
+	eng: 60,
+	fullName: function() {
+		return this.lname + this.fname;
+	},
+	total: function() {
+		return this.kor + this.math + this.eng;
+	},
+	avg: function(){
+		return this.total()/3;
+	}
+}
+
+console.log(hong);
+var name = hong.fullName();
+console.log(hong.total());
+
+
+var std = {
+	fname: "길순",
+	lname: "홍",
+	kor: 90,
+	math: 88,
+	eng: 66,
+}
+var std2 = {
+	fname: "길만", // var fname = "길만"
+	lname: "홍",
+	kor: 92,
+	math: 90,
+	eng: 87,
+}
+var score = {
+	total: function(obj) {
+		return obj.kor + obj.math + obj.eng;
+	},
+	avg: function(obj) {
+		return this.total(obj)/3;
+	}
+}
+
+console.log(score.avg(std));
+
+// 함수선언식
+total();
+function total() {
+	console.log("함수선언식");
+}
+
+
+// 함수표현식
+total2();
+var total2 = function(){
+	console.log("함수표현식");
+}
+</script>
