@@ -1,0 +1,5 @@
+.wrapper {max-width: 1500px; margin: auto;}
+.bt-wrap {padding: 24px 0;}
+.list-tb {border: 1px solid #aaa; text-align: center; width: 100%;}
+.list-tb th {background-color: #444; color: #fff; padding: 12px 4px;}
+.list-tb td {border: 1px solid #aaa; padding: 8px 4px;}
