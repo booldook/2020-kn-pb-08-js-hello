@@ -56,3 +56,5 @@ function insertData(data) {
 	html += '</div>';
 	$(".lists").append(html);
 }
+
+//https://8oi9s0nnth.apigw.ntruss.com/corona19-masks/v1/storesByGeo/json?lat=37.497986&lng=127.027533&m=1000
