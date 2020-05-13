@@ -1,5 +1,17 @@
 .bts {text-align: center; padding: 24px;}
 .wrapper {max-width: 1200px; margin: auto;}
 
-.list {width: 24%; margin: 0.5%; float: left; position: relative;}
-.photo-desc {position: absolute; background-color: rgba(0,0,0,0.7); color: #fff; bottom: 0; left: 0; width: 100%; padding: 24px 0; text-align: center;}
+.list {width: 24%; margin: 0.5%; float: left; position: relative; overflow: hidden;}
+.photo {transition: all 1s;}
+.photo-desc {position: absolute; background-color: rgba(0,0,0,0.7); color: #fff; bottom: -70px; opacity: 0; left: 0; width: 100%; padding: 24px 0; text-align: center; transition: all 0.35s;}
+
+.list:hover > .photo {transform: scale(1.2);}
+.list:hover > .photo-desc {bottom: 0; opacity: 1;}
+
+@media screen and (max-width: 767px) {
+	.list {width: 49%;}
+}
+
+@media screen and (max-width: 575px) {
+	.list {width: 99%;}
+}
