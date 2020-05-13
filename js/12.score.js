@@ -38,27 +38,40 @@ var std = [];
 $("#btSave").click(function(){
 	std.push({
 		name: $("#name").val(),
-		kor: $("#kor").val(),
-		eng: $("#eng").val(),
-		math: $("#math").val(),
+		kor: Number($("#kor").val()),
+		eng: Number($("#eng").val()),
+		math: Number($("#math").val()),
 	});	//배열의 맨 뒤에 내용을 추가
+	$("#btReset").trigger("click"); // 이벤트 실행
 	$(".score-tb > tbody").empty();
 	for(var i=0; i<std.length; i++) {
-		dataInsert(std[i], "A");
+		dataInsert(std[i], "P", i+1);
 	}
 });
 
-function dataInsert(data, position) {
-	console.log(data, position);
+function dataInsert(data, position, index) {
 	var html = '';
 	html += '<tr>';
-	html += '	<td>1</td>';
-	html += '	<td>'+$("#name").val()+'</td>';
-	html += '	<td>'+$("#kor").val()+'</td>';
-	html += '	<td>'+$("#eng").val()+'</td>';
-	html += '	<td>'+$("#math").val()+'</td>';
-	html += '	<td>240</td>';
-	html += '	<td>80</td>';
+	html += '	<td>'+index+'</td>';
+	html += '	<td>'+data.name+'</td>';
+	html += '	<td>'+data.kor+'</td>';
+	html += '	<td>'+data.eng+'</td>';
+	html += '	<td>'+data.math+'</td>';
+	html += '	<td>'+total(data)+'</td>';
+	html += '	<td>'+avg(data)+'</td>';
 	html += '</tr>';
-	$(".score-tb > tbody").append(html);
+	if(position == "A") {
+		$(".score-tb > tbody").append(html);
+	}
+	else {
+		$(".score-tb > tbody").prepend(html);
+	}
+}
+
+function total(data) {
+	return data.kor + data.eng + data.math;
+}
+
+function avg(data) {
+	return ((data.kor + data.eng + data.math)/3).toFixed(2);
 }
