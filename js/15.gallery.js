@@ -38,3 +38,21 @@ lists[7] = {
 	img: '../img/p8.jpg'
 }
 
+$("#btMake").click(function(){
+	for(var i=0; i<lists.length; i++) {
+		insertData(lists[i]);
+	}
+});
+
+$("#btRemove").click(function(){
+	$(".lists").empty();
+});
+
+function insertData(data) {
+	var html = '';
+	html += '<div class="list">';
+	html += '	<img src="'+data.img+'" alt="그림" class="photo img">';
+	html += '	<div class="photo-desc">'+data.title+'</div>';
+	html += '</div>';
+	$(".lists").append(html);
+}
