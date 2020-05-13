@@ -41,7 +41,15 @@ $("#btSave").click(function(){
 		kor: $("#kor").val(),
 		eng: $("#eng").val(),
 		math: $("#math").val(),
-	});
+	});	//배열의 맨 뒤에 내용을 추가
+	$(".score-tb > tbody").empty();
+	for(var i=0; i<std.length; i++) {
+		dataInsert(std[i], "A");
+	}
+});
+
+function dataInsert(data, position) {
+	console.log(data, position);
 	var html = '';
 	html += '<tr>';
 	html += '	<td>1</td>';
@@ -53,4 +61,4 @@ $("#btSave").click(function(){
 	html += '	<td>80</td>';
 	html += '</tr>';
 	$(".score-tb > tbody").append(html);
-});
+}
