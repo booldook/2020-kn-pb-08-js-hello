@@ -92,3 +92,17 @@ $("#bt18").click(function(){
 	$("#box8").stop().animate({"left": 0}, 500);
 	$("#box9").stop().animate({"left": 0}, 500);
 });
+
+$("#bt19").click(function(){
+	$("#box10").stop().animate({"left": "1200px"}, 2000, function(){
+		$(this).stop().animate({"top": "400px"}, 1000, function(){
+			$(this).stop().animate({"left": 0}, 2000, function(){
+				$(this).stop().animate({"top": 0}, 1000);
+			});
+		});
+	});
+});
+
+$("#bt20").click(function(){
+	$("#box10").stop().animate({"left": 0, "top": 0}, 500);
+});
