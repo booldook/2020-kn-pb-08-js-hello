@@ -32,12 +32,12 @@ $("#bt3").click(function(){
 	$("#box1").toggle();
 });
 
-$("#bt1").click(function(){
-	$("#box2").hide(1000);
+$("#bt4").click(function(){
+	$("#box2").stop().hide(1000);
 });
-$("#bt2").click(function(){
-	$("#box2").show(1000);
+$("#bt5").click(function(){
+	$("#box2").stop().show(1000);
 });
-$("#bt3").click(function(){
-	$("#box2").toggle(1000);
+$("#bt6").click(function(){
+	$("#box2").stop().toggle(1000);
 });
