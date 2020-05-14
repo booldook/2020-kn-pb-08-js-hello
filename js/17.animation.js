@@ -41,3 +41,23 @@ $("#bt5").click(function(){
 $("#bt6").click(function(){
 	$("#box2").stop().toggle(1000);
 });
+
+$("#bt7").click(function(){
+	$("#box3").stop().fadeOut("slow");
+});
+$("#bt8").click(function(){
+	$("#box3").stop().fadeIn("fast");
+});
+$("#bt9").click(function(){
+	$("#box3").stop().fadeToggle(2000);
+});
+
+$("#bt10").click(function(){
+	$("#box4").stop().slideUp("slow");
+});
+$("#bt11").click(function(){
+	$("#box4").stop().slideDown("fast");
+});
+$("#bt12").click(function(){
+	$("#box4").stop().slideToggle(2000);
+});

@@ -1,3 +1,6 @@
+body {height: 10000px;}
 .bts, .stage {padding: 16px; text-align: center;}
-.stage {display: flex; justify-content: center; height: 260px; border-bottom: 2px solid #999;}
+.stage {display: flex; justify-content: center; height: 260px; border-bottom: 2px solid #999; position: relative;}
 .box {width: 200px; height: 200px; border: 10px solid black; margin: 20px;}
+
+#box5 {position: absolute; left: 0; top: 0;}
