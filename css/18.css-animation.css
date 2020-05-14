@@ -1,0 +1,21 @@
+body {height: 10000px;}
+.wrapper {max-width: 1200px; margin: 50px auto;}
+.box {width: 200px; border: 2px solid red; margin: 24px; /* overflow: hidden; */}
+.box > img {transition: all 1s;}
+.box1:hover > img {transform: scale(1.8) rotate(45deg);}
+.box2:hover > img {transform: translate(-50%, -50%)}
+.box3:hover > img {transform: rotate(3600deg);}
+.box4 > img {transform-origin: bottom;}
+.box4:hover > img {transform: rotateX(180deg);}
+.box5 {perspective: 700px;}
+.box5 > img {transform-origin: left;}
+.box5:hover > img {transform: rotateY(-180deg);}
+.box6 > img {transform-origin: right bottom;}
+.box6:hover > img {transform: rotateZ(180deg);}
+.box7 > img {transform-origin: bottom;}
+.box7:hover > img {transform: skew(-25deg);}
+.box8 > img {transform-origin: right;}
+.box8:hover > img {transform: skewY(-25deg);}
+.box9 {perspective: 200px;}
+.box9 > img {transform-style: preserve-3d; transform-origin: bottom;}
+.box9:hover > img {transform: rotateX(75deg);}
