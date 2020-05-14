@@ -8,9 +8,36 @@
 // 1. Math.random() * 255 => 0 ~ 254.234789239084
 // 2. Math.ceil(Math.random() * 255) => 0 ~ 255
 var r, g, b;
-for(var i=0; i<$(".box").length; i++) {
+/* for(var i=0; i<$(".box").length; i++) {
 	r = Math.ceil(Math.random() * 255);
 	g = Math.ceil(Math.random() * 255);
 	b = Math.ceil(Math.random() * 255);
 	$(".box").eq(i).css('background-color', 'rgb('+r+','+g+','+b+')');
-}
+} */
+
+$(".box").each(function(){
+	r = Math.ceil(Math.random() * 255);
+	g = Math.ceil(Math.random() * 255);
+	b = Math.ceil(Math.random() * 255);
+	$(this).css('background-color', 'rgb('+r+','+g+','+b+')');
+});
+
+$("#bt1").click(function(){
+	$("#box1").hide();
+});
+$("#bt2").click(function(){
+	$("#box1").show();
+});
+$("#bt3").click(function(){
+	$("#box1").toggle();
+});
+
+$("#bt1").click(function(){
+	$("#box2").hide(1000);
+});
+$("#bt2").click(function(){
+	$("#box2").show(1000);
+});
+$("#bt3").click(function(){
+	$("#box2").toggle(1000);
+});
