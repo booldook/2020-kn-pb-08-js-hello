@@ -81,3 +81,14 @@ $("#bt15").click(function(){
 $("#bt16").click(function(){
 	$("#box6").stop().animate({"left": 0, "top": 0}, 500);
 });
+
+$("#bt17").click(function(){
+	$("#box7").stop().animate({"left": "1200px"}, 1000);
+	$("#box8").stop().animate({"left": "1200px"}, 1000, "swing");
+	$("#box9").stop().animate({"left": "1200px"}, 1000, "linear");
+});
+$("#bt18").click(function(){
+	$("#box7").stop().animate({"left": 0}, 500);
+	$("#box8").stop().animate({"left": 0}, 500);
+	$("#box9").stop().animate({"left": 0}, 500);
+});
