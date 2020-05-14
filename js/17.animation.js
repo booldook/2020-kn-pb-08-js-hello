@@ -61,3 +61,23 @@ $("#bt11").click(function(){
 $("#bt12").click(function(){
 	$("#box4").stop().slideToggle(2000);
 });
+
+/*
+$("#box5").stop().animate({css});
+$("#box5").stop().animate({css}, speed);
+$("#box5").stop().animate({css}, speed, function(){});
+$("#box5").stop().animate({css}, speed, easing, function(){});
+*/
+$("#bt13").click(function(){
+	$("#box5").stop().animate({"left": "1200px"}, 2000);
+});
+$("#bt14").click(function(){
+	$("#box5").stop().animate({"left": "0"}, 500);
+});
+
+$("#bt15").click(function(){
+	$("#box6").stop().animate({"left": "1200px", "top": "100px"}, 2000);
+});
+$("#bt16").click(function(){
+	$("#box6").stop().animate({"left": 0, "top": 0}, 500);
+});
