@@ -93,11 +93,12 @@ $("#bt18").click(function(){
 	$("#box9").stop().animate({"left": 0}, 500);
 });
 
+// border-width: 1px; border-style: "solid"; border-color: red;
 $("#bt19").click(function(){
-	$("#box10").stop().animate({"left": "1200px"}, 2000, function(){
-		$(this).stop().animate({"top": "400px"}, 1000, function(){
-			$(this).stop().animate({"left": 0}, 2000, function(){
-				$(this).stop().animate({"top": 0}, 1000);
+	$("#box10").stop().animate({"left": "1200px", "border-width": "20px"}, 2000, function(){
+		$(this).stop().animate({"top": "400px", "border-width": "2px"}, 1000, function(){
+			$(this).stop().animate({"left": 0, "border-width": "30px"}, 2000, function(){
+				$(this).stop().animate({"top": 0, "border-width": "10px"}, 1000);
 			});
 		});
 	});
@@ -106,3 +107,5 @@ $("#bt19").click(function(){
 $("#bt20").click(function(){
 	$("#box10").stop().animate({"left": 0, "top": 0}, 500);
 });
+
+// https://www.w3schools.com/jquery/eff_animate.asp  <== animation 가능 css
