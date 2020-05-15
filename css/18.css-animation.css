@@ -7,6 +7,8 @@ body {height: 10000px;}
 .box3:hover > img {transform: rotate(3600deg);}
 .box4 > img {transform-origin: bottom;}
 .box4:hover > img {transform: rotateX(180deg);}
+
+
 .box5 {perspective: 700px;}
 .box5 > img {transform-origin: left;}
 .box5:hover > img {transform: rotateY(-180deg);}
@@ -19,3 +21,9 @@ body {height: 10000px;}
 .box9 {perspective: 200px;}
 .box9 > img {transform-style: preserve-3d; transform-origin: bottom;}
 .box9:hover > img {transform: rotateX(75deg);}
+
+.box10 {transition: all 1s; opacity: 0.3;}
+.box10:hover {width: 100%; opacity: 1;}
+
+.box11 {}
+
