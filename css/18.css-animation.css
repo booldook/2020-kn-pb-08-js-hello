@@ -25,5 +25,16 @@ body {height: 10000px;}
 .box10 {transition: all 1s; opacity: 0.3;}
 .box10:hover {width: 100%; opacity: 1;}
 
-.box11 {}
+.box11 {
+	animation-name: ani11; 
+	animation-duration: 2s; 
+	animation-fill-mode: forwards; 
+	animation-iteration-count: infinite; 
+	animation-direction: alternate; 
+	animation-timing-function: linear;
+}
 
+@keyframes ani11 {
+	from {transform: translateX(0);}
+	to {transform: translateX(1200px);}
+}
