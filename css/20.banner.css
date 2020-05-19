@@ -1,0 +1,11 @@
+body {height: 3000px;}
+
+.wrapper {max-width: 800px; margin: 50px auto; border: 1px solid red; position: relative;}
+.bt-prev, .bt-next {width: 40px; height: 40px; color: #fff; background-color: rgba(0,0,0,0.4); text-align: center; font-size: 32px; line-height: 32px; border-radius: 6px; position: absolute; top: 50%; transform: translateY(-50%); cursor: pointer; transition: all 0.5s;}
+.bt-prev {left: 24px;}
+.bt-next {right: 24px;}
+.bt-prev:hover, .bt-next:hover {color: #222; background-color: rgba(255,255,255,0.4);}
+
+
+#banner1 > .ban-wrap {position: relative; width: 400%; left: 0;}
+#banner1 .ban {float: left; width: 25%;}
