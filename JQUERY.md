@@ -37,10 +37,25 @@ $(".navi-wrap > :nth-child(1)")
 		<div class="navi">Menu3</div>
 	</div>
 </header>
+<div class="lt-wrap">
+	<div class="navi">Left Menu1</div>
+	<div class="navi">Left Menu2</div>
+	<div class="navi">Left Menu3</div>
+</div>
 
 <script>
 $(".navi").eq(0) // <div class="navi">Menu1</div>
 $(".navi").eq(1) // <div class="navi">Menu2</div>
 $(".navi").eq(2) // <div class="navi">Menu3</div>
+$(".navi").eq(3) // <div class="navi">Left Menu1</div>
+$(".navi").eq(4) // <div class="navi">Left Menu2</div>
+$(".navi").eq(5) // <div class="navi">Left Menu3</div>
+
+$(".navi-wrap").find(".navi").eq(0)
+$(".navi-wrap").find(".navi").eq(1)
+$(".navi-wrap").find(".navi").eq(2)
+$(".lt-wrap").find(".navi").eq(0)
+$(".lt-wrap").find(".navi").eq(1)
+$(".lt-wrap").find(".navi").eq(2)
 </script>
 ```
