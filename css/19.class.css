@@ -9,3 +9,11 @@
 .main-wrap {height: 300px; background-color: #aaa;}
 .main-content {height: 200px; margin-top: 30px;}
 .main-content > article {width: 33.3333%; height: 100%; float: left; padding: 1rem; border: 1px solid red;}
+
+.info-menus {position: relative; z-index: 10;}
+.info-menus > .menu {width: 120px; text-align: center; padding: 0.75rem 0; border: 1px solid #aaa; float: left; margin-right: 0.25rem; background-color: #ddd; 
+	cursor: pointer;}
+.info-menus > .menu.active {border-bottom: 1px solid #fff; background-color: #fff;}
+.info-conts {position: relative; margin-top: -1px; z-index: 9;}
+.info-conts table {width: 100%; border: 1px solid #aaa; position: absolute; display: none;}
+.info-conts td {border-bottom: 1px solid #aaa; padding: 0.5rem;}

@@ -59,3 +59,57 @@ $(".lt-wrap").find(".navi").eq(1)
 $(".lt-wrap").find(".navi").eq(2)
 </script>
 ```
+
+## 3. 이벤트
+
+- **click**
+```js
+$("선택자").click(function(){
+	
+});
+```
+
+- **hover**
+```js
+$("선택자").hover(function(){
+	// mouseover
+}, function(){
+	// mouseleave
+});
+```
+
+- **mouseover**
+```js
+$("선택자").mouseover(function(){
+	// mouseover
+});
+```
+
+- **mouseleave**
+```js
+$("선택자").mouseleave(function(){
+	// mouseleave
+});
+```
+
+- **scroll**
+```js
+$("선택자").scroll(function(){
+	// scroll이 일어나면...
+});
+```
+
+- **resize**
+```js
+$("선택자").resize(function(){
+	// 브라우저 창의 크기가 변하면...
+});
+```
+
+- 이벤트를 실행하고 싶을 때
+```js
+$("선택자").click(function(){
+
+});
+$("선택자").trigger("click");
+```
