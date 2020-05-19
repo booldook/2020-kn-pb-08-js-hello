@@ -108,4 +108,15 @@ $("#bt20").click(function(){
 	$("#box10").stop().animate({"left": 0, "top": 0}, 500);
 });
 
+$("#bt21").click(function(){
+	$("#box11").stop().fadeOut(3000, function(){
+		alert("#box11 이 사라졌습니다.");
+	});
+});
+$("#bt22").click(function(){
+	$("#box11").stop().fadeIn(3000, function(){
+		alert("#box11 이 나타났습니다.");
+	});
+});
+
 // https://www.w3schools.com/jquery/eff_animate.asp  <== animation 가능 css
