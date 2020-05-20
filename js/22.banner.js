@@ -32,7 +32,8 @@ var now = 0;
 var last = $(".ban").length - 1;
 var idx = [];
 var speed = 500;
-
+var gap = 3000;
+var interval;
 init();
 
 /******** 사용자정의 함수 ********/
@@ -46,8 +47,18 @@ function init() {
 /******** 이벤트 등록 ********/
 $(".bt-prev").click(onPrev);
 $(".bt-next").click(onNext);
+$(".wrapper").hover(onHover, onLeave);
+interval = setInterval(onNext, gap);
 
 /******** 이벤트 콜백함수 ********/
+function onHover(){
+	clearInterval(interval);
+}
+
+function onLeave(){
+	interval = setInterval(onNext, gap);
+}
+
 function onPrev() {
 	now = (now == 0) ? last : now - 1;
 	idx.pop();
