@@ -8,6 +8,9 @@ body {height: 3000px;}
 .bt-next {right: 24px;}
 .bt-prev:hover, .bt-next:hover {color: #222; background-color: rgba(255,255,255,0.4);}
 
+.pagers {position: absolute; z-index: 9999; bottom: 16px; left: 50%; transform: translateX(-50%); color: #fff;}
+.pager {margin: 0 2px; cursor: pointer;}
+
 
 .ban-wrap {position: relative; width: 100%;}
 .ban {width: 100%; position: absolute; top: 0;}
