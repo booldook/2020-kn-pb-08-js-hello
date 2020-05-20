@@ -26,6 +26,7 @@ var ban = []; // [3, 0, 1] / [0, 1, 2] / [1, 2, 3] / [2, 3, 0]
 var interval;
 
 init();
+pagerMaker();
 
 /* 이벤트 */
 $(".bt-prev").click(onPrev);
@@ -35,6 +36,23 @@ $(".wrapper").mouseleave(onLeave);
 interval = setInterval(onInterval, 3000);
 
 /* 이벤트 콜백 */
+function onPagerClick() {
+	var old = now;
+	now = $(this).index();
+	if(old > now) {
+		// prev
+		$(".ban").eq(0).remove();
+		$(".ban-wrap").prepend($($ban[now]).clone());
+		ani(0);
+	}
+	if(old < now) {
+		// next
+		$(".ban").eq(2).remove();
+		$(".ban-wrap").append($($ban[now]).clone());
+		ani("-200%");
+	}
+}
+
 function onOver() {
 	clearInterval(interval);
 }
@@ -69,8 +87,20 @@ function init() {
 	}
 }
 
+// pagerMaker
+function pagerMaker() {
+	for(var i=0, html; i<=last; i++) {
+		if(now == i) html = '<span class="pager fas fa-circle"></span>';
+		else html = '<span class="pager far fa-circle"></span>';
+		$(".pagers").append(html);
+	}
+	$(".pager").click(onPagerClick);
+}
+
 // animate
 function ani(tar) {
+	$(".pager").removeClass("fas").addClass("far");
+	$(".pager").eq(now).removeClass("far").addClass("fas");
 	$(".ban-wrap").stop().animate({"left": tar}, 300, function(){
 		init();
 		$(this).css("left", "-100%");
