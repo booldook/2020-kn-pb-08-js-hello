@@ -32,6 +32,8 @@ css("color", "red")
 
 console.log(	$(".ban-wrap").prepend($ban[now])	); -> return $(".ban-wrap")
 console.log(	$($ban[now]).prependTo($(".ban-wrap"))	); -> return $($ban[now])
+
+html = '<img src="'+$($ban[now]).children("img").attr("src")+'" class="img">';
 */
 
 /************* 초기값 *************/
@@ -39,13 +41,23 @@ var now = 0;
 var $ban = $(".ban");
 var last = $ban.length - 1;
 var speed = 500;
+var gap = 3000;
+var interval;
 init();
+pagerMaker();
 
 /************* 사용자 지정 *************/
 function init() {
 	$(".ban-wrap").empty();
-	//html = '<img src="'+$($ban[now]).children("img").attr("src")+'" class="img">';
 	$($ban[now]).appendTo($(".ban-wrap")).removeClass("ban");
+}
+
+function pagerMaker() {
+	for(var i=0, html; i<=last; i++) {
+		if(now == i) html = '<span class="pager fas fa-circle"></span>';
+		else html = '<span class="pager far fa-circle"></span>';
+		$(".pagers").append(html);
+	}
 }
 
 function ani() {
@@ -55,8 +67,18 @@ function ani() {
 /************* 이벤트 등록 *************/
 $(".bt-prev").click(onPrev);
 $(".bt-next").click(onNext);
+$(".wrapper").hover(onHover, onLeave);
+interval = setInterval(onNext, gap);
 
 /************* 이벤트 콜백 *************/
+function onHover() {
+	clearInterval(interval);
+}
+
+function onLeave() {
+	interval = setInterval(onNext, gap);
+}
+
 function onPrev() {
 	now = (now == 0) ? last : now - 1;
 	ani();
