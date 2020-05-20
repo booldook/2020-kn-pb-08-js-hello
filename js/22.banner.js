@@ -31,6 +31,7 @@ console.log(arr);
 var now = 0;
 var last = $(".ban").length - 1;
 var idx = [];
+var speed = 500;
 
 init();
 
@@ -43,6 +44,29 @@ function init() {
 }
 
 /******** 이벤트 등록 ********/
-
+$(".bt-prev").click(onPrev);
+$(".bt-next").click(onNext);
 
 /******** 이벤트 콜백함수 ********/
+function onPrev() {
+	now = (now == 0) ? last : now - 1;
+	idx.pop();
+	idx.unshift(idx[0] + 1);
+	$(".ban").eq(now).css({
+		"opacity": 0,
+		"z-index": idx[0]
+	});
+	$(".ban").eq(now).stop().animate({"opacity": 1}, speed);
+}
+
+function onNext() {
+	$(".ban").eq(now).stop().animate({"opacity": 0}, speed, function(){
+		idx.shift(); // 4 -> 3 (0, 1, 2)
+		idx.push(idx[last - 1] - 1);
+		$(this).css({
+			"opacity": 1,
+			"z-index": idx[last]
+		});
+		now = (now == last) ? 0 : now + 1;
+	});
+}
