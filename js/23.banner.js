@@ -58,9 +58,12 @@ function pagerMaker() {
 		else html = '<span class="pager far fa-circle"></span>';
 		$(".pagers").append(html);
 	}
+	$(".pager").click(onPagerClick);
 }
 
 function ani() {
+	$(".pager").removeClass("fas").addClass("far");
+	$(".pager").eq(now).removeClass("far").addClass("fas");
 	$($ban[now]).prependTo($(".ban-wrap")).css("opacity", 0).addClass("ban").animate({"opacity": 1}, speed, init);
 }
 
@@ -71,6 +74,11 @@ $(".wrapper").hover(onHover, onLeave);
 interval = setInterval(onNext, gap);
 
 /************* 이벤트 콜백 *************/
+function onPagerClick() {
+	now = $(this).index();
+	ani();
+}
+
 function onHover() {
 	clearInterval(interval);
 }
