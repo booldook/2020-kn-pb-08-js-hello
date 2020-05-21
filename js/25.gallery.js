@@ -30,12 +30,14 @@ function init() {
 		html += '</div>';
 		$(html).appendTo(".thumbs").click(onThumbClick);
 	}
+	$(".thumb").eq(0).trigger("click");
 }
 
 /*************** 이벤트 콜백 ***************/
 function onThumbClick() {
-	var src = $(this).find("img").attr("src");
-	$(".big-img").attr("src", src);
+	$(".thumb").removeClass("active");
+	$(this).addClass("active");
+	$(".big-img").attr("src", $(this).find("img").attr("src"));
 }
 
 

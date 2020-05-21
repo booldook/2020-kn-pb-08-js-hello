@@ -2,3 +2,4 @@
 .stage {border: 1px solid #ccc; min-height: 500px;}
 .thumbs {margin-top: 10px; width: 101%; margin-left: -0.5%;}
 .thumb {float: left; margin: 0 0.5%; border: 1px solid #ccc; cursor: pointer;}
+.thumb.active {border: 3px solid #2d96b1;}
