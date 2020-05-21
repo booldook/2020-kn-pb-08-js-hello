@@ -52,7 +52,6 @@ function onModalClose() {
 	$(".modal-wrap").stop().fadeOut(300);
 }
 
-
 /*************** 이벤트 등록 ***************/
 $(".big-img").click(onBigClick);
 $(".bt-close").click(onModalClose);
