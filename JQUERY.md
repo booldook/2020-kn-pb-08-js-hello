@@ -196,3 +196,14 @@ else {
 }
 </script>
 ```
+
+## 8. Getter/Setter가 존재하는 메서드들
+
+### 1. css()
+- var color = css("color");	Getter(return값이 있는 메서드)
+- css("color", "red");	Setter
+- css({"color": "red", border: "1px solid blue"});	Setter
+
+### 2. attr()
+- var id = $(".result").attr("id");
+- $(".result").attr("id", "wrapper");
