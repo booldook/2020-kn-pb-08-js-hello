@@ -35,9 +35,12 @@ function init() {
 
 /*************** 이벤트 콜백 ***************/
 function onThumbClick() {
+	var $thumb = $(this);	// 클릭된 .thumb
 	$(".thumb").removeClass("active");
-	$(this).addClass("active");
-	$(".big-img").attr("src", $(this).find("img").attr("src"));
+	$thumb.addClass("active");
+	$(".big-img").stop().fadeOut(200, function() {
+		$(this).attr("src", $thumb.find("img").attr("src")).fadeIn(400);
+	});
 }
 
 
