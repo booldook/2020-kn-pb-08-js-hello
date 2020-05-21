@@ -1,10 +1,10 @@
 .wrapper {max-width: 800px; margin: 50px auto;}
-.stage {border: 1px solid #ccc; min-height: 500px;}
+.stage {border: 1px solid #ccc; min-height: 500px; cursor: pointer;}
 .thumbs {margin-top: 10px; width: 101%; margin-left: -0.5%;}
 .thumb {float: left; margin: 0 0.5%; border: 1px solid #ccc; cursor: pointer;}
 .thumb.active {border: 3px solid #2d96b1;}
 
-.modal-wrap {position: fixed; background-color: rgba(0,0,0,0.7); width: 100%; height: 100vh; top: 0; left: 0; overflow: hidden;}
+.modal-wrap {position: fixed; background-color: rgba(0,0,0,0.7); width: 100%; height: 100vh; top: 0; left: 0; overflow: hidden; display: none;}
 
 .modal {width: 50%; position: absolute; left: 25%; top: 50%; transform: translateY(-50%);}
 .modal > .bt-close {background-color: #111; color: #fff; font-size: 24px; position: absolute; top: 0; right: 0; width: 50px; height: 50px; text-align: center; line-height: 50px; cursor: pointer;}
