@@ -8,4 +8,21 @@
 	border: 4px solid #0f3a53;}
 .bt-reset {background-image: linear-gradient(#ebbe6b, #90671c); 
 	border: 4px solid #53460f;}
-.wrapper {}
+.wrapper {max-width: 1400px; border-right: 4px dotted lightcoral; margin: auto;}
+.modal-wrap {width: 100%; height: 100vh; position: fixed; top: 0; left: 0; background-color: rgba(0,0,0,0.7);}
+.modal-content {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; border: 4px solid #ccc; padding: 2rem; font-size: 1.5rem; 
+	text-align: center;}
+.score-tb {width: 400px; border: 1px solid #ccc;}
+.score-tb > thead {background-color: #333; color: #fff;}
+.score-tb th,
+.score-tb td {padding: 0.5rem; border: 1px solid #ccc; text-align: center;}
+.bt-close {background-color: #333; color: #fff; padding: 0.5rem 1rem; border: none; 
+	font-size: 1.25rem; margin: 1rem;}
+.man {width: 50px; position: relative; margin: 20px;}
+.man > img {animation-name: running; animation-iteration-count: infinite; animation-duration: 1s; transform: rotate(15deg); transform-origin: center bottom;}
+@keyframes running {
+	0% {transform: rotate(15deg);}
+	50% {transform: rotate(-15deg);}
+	100% {transform: rotate(15deg);}
+}
+
