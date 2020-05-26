@@ -207,3 +207,9 @@ else {
 ### 2. attr()
 - var id = $(".result").attr("id");
 - $(".result").attr("id", "wrapper");
+
+
+
+
+## jQuery Dimension
+### [참고사이트 - w3scholls](https://www.w3schools.com/jquery/jquery_dimensions.asp)
