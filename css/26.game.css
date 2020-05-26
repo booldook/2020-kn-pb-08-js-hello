@@ -5,12 +5,13 @@
 .bt-ready {background-image: linear-gradient(#85eb6b, #2f901c); 
 	border: 4px solid #1a530f;}
 .bt-start {background-image: linear-gradient(#6bdceb, #1c6f90); 
-	border: 4px solid #0f3a53;}
+	border: 4px solid #0f3a53; display: none;}
 .bt-reset {background-image: linear-gradient(#ebbe6b, #90671c); 
 	border: 4px solid #53460f;}
 .wrapper {max-width: 1400px; border-right: 4px dotted lightcoral; margin: auto;}
-.modal-wrap {width: 100%; height: 100vh; position: fixed; top: 0; left: 0; background-color: rgba(0,0,0,0.7);}
-.modal-content {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; border: 4px solid #ccc; padding: 2rem; font-size: 1.5rem; 
+.modal-wrap {width: 100%; height: 100vh; position: fixed; top: 0; left: 0; background-color: rgba(0,0,0,0.7); display: none;}
+.modal-content {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+	background-color: #fff; border: 4px solid #ccc; padding: 2rem; font-size: 1.5rem; 
 	text-align: center;}
 .score-tb {width: 400px; border: 1px solid #ccc;}
 .score-tb > thead {background-color: #333; color: #fff;}
