@@ -23,7 +23,11 @@ function onReady() {
 }
 
 function onStart() {
+	result = [];
+	$(".bt-start").hide();
+	$(".bt-reset").hide();
 	$(".man").each(function(){
+		$(this).find("img").css("animation-play-state", "running");
 		var speed = Math.random() * 300 + 3000;
 		$(this).stop().animate({"left": "500px"}, speed, "linear", function(){
 			var speed = Math.random() * 400 + 2000;
@@ -32,7 +36,16 @@ function onStart() {
 				$(this).stop().animate({"left": "1400px"}, speed, "linear", function(){
 					result.push(	$(this).index()	);
 					if(result.length == cnt) {
+						$(".score-tb > tbody").empty();
+						for(var i=0, html; i<result.length; i++) {
+							html  = '<tr>';
+							html += '<td class="score"><b>'+(i+1)+'</b>등</td>';
+							html += '<td class="name">'+result[i]+'번</td>';
+							html += '</tr>';
+							$(".score-tb > tbody").append(html);
+						}
 						$(".modal-wrap").stop().fadeIn(500);
+						$(".bt-reset").show();
 					}
 				});
 			});
