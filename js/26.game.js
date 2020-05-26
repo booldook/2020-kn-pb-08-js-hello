@@ -16,17 +16,24 @@ function onReady() {
 		html += '<img src="../img/run.png" class="img">';
 		html += '<div class="name">홍길동</div>';
 		html += '</div>';
-		$(".wrapper").append(html);
+		$(html).appendTo(".wrapper").find("img").css("animation-play-state", "paused");
 	}
+	$(".bt-ready").hide();
+	$(".bt-start").show();
 }
 
 function onStart() {
-
+	$(".man").each(function(){
+		var speed = Math.random() * 1000 + 1000;
+		$(this).stop().animate({"left": "1400px"}, speed);
+	});
 }
 
 function onReset() {
 	$(".wrapper").empty();
 	$(".bts").find("input[name='cnt']").val('4');
+	$(".bt-ready").show();
+	$(".bt-start").hide();
 }
 
 function onClose() {
