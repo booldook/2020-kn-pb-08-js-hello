@@ -24,8 +24,19 @@ function onReady() {
 
 function onStart() {
 	$(".man").each(function(){
-		var speed = Math.random() * 1000 + 1000;
-		$(this).stop().animate({"left": "1400px"}, speed);
+		var speed = Math.random() * 300 + 3000;
+		$(this).stop().animate({"left": "500px"}, speed, "linear", function(){
+			var speed = Math.random() * 400 + 2000;
+			$(this).stop().animate({"left": "1000px"}, speed, "linear", function(){
+				var speed = Math.random() * 500 + 2000;
+				$(this).stop().animate({"left": "1400px"}, speed, "linear", function(){
+					result.push(	$(this).index()	);
+					if(result.length == cnt) {
+						$(".modal-wrap").stop().fadeIn(500);
+					}
+				});
+			});
+		});
 	});
 }
 
@@ -37,7 +48,8 @@ function onReset() {
 }
 
 function onClose() {
-
+	$(".modal-wrap").hide();
+	onReset();
 }
 
 
