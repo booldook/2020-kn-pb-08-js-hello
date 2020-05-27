@@ -1,8 +1,8 @@
 /************** 전역선언 **************/
 var cnt = 0;			// 선수 개수
 var result = [];	// 결과가 담길 배열
-var users = ["황은혜", "이금주", "유은서", "고태윤", "원아영", "김재혁", "서혜원", "윤여준", "김경아", "전예지", "백수정"];
-//var users = ["조영래", "김일권", "임수비", "이다원", "최다솜", "이승주", "이보경"];
+//var users = ["황은혜", "이금주", "유은서", "고태윤", "원아영", "김재혁", "서혜원", "윤여준", "김경아", "전예지", "백수정"];
+var users = ["조영래", "김일권", "임수비", "이다원", "최다솜", "이승주", "이보경"];
 
 
 /************** 사용자함수 **************/
@@ -41,7 +41,7 @@ function onStart() {
 						$(".score-tb > tbody").empty();
 						for(var i=0, html; i<result.length; i++) {
 							html  = '<tr>';
-							html += '<td class="score"><b>'+(i+1)+'</b>등</td>';
+							html += '<td class="score"><b>'+(i+1)+'</b>번</td>';
 							html += '<td class="name">'+$(".man").eq(result[i]).find(".name").html()+'</td>';
 							html += '</tr>';
 							$(".score-tb > tbody").append(html);
