@@ -1,0 +1,7 @@
+h1 {font-size: 16px;}
+.sample-tb {width: 100%;}
+.sample-tb td {width: 33.3333%; text-align: left; vertical-align: top; padding: 3rem;}
+
+.sample-tb td:nth-child(1) {background-color: rgb(190, 153, 51);}
+.sample-tb td:nth-child(2) {background-color: rgb(22, 134, 134);}
+.sample-tb td:nth-child(3) {background-color: rgb(74, 141, 19);}
