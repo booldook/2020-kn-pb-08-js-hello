@@ -1,0 +1,4 @@
+.wrapper {max-width: 1200px; margin: 100px auto; text-align: center; position: relative;}
+.lamp {position: absolute; top: 50px; left: calc(50% - 50px);}
+.lamp-on {display: none;}
+.lamp-off {display: inline-block;}
