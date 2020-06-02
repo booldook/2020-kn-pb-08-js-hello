@@ -35,4 +35,29 @@ function onTurn() {
 
 
 
-/* Javascript */
+/* Javascript ES5 */
+/*
+function onLampOn() {
+	document.getElementsByClassName("lamp")[0].src = "../img/pic_bulbon.gif";
+}
+
+function onLampOff() {
+	document.getElementsByClassName("lamp")[0].src = "../img/pic_bulboff.gif";
+}
+
+document.getElementById("btOn").addEventListener("click", onLampOn);
+document.getElementById("btOff").addEventListener("click", onLampOff);
+*/
+
+
+/* Javascript ES6 */
+var onLampOn = () => {
+	document.querySelector(".lamp").src = "../img/pic_bulbon.gif";
+}
+
+var onLampOff = () => {
+	document.querySelector(".lamp").src = "../img/pic_bulboff.gif";
+}
+
+document.querySelector(".bt-on").addEventListener("click", onLampOn);
+document.querySelector(".bt-off").addEventListener("click", onLampOff);
