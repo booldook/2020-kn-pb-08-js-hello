@@ -1,3 +1,4 @@
+<script src="../js/jquery-3.5.1.min.js"></script>
 <script>
 // IIFE - Immediately Invoked Function Expression
 (function () {
@@ -33,11 +34,43 @@ var window = {
 	}
 }
 
-// Callback - Javascript 대표
-var age = 26;
-var interval = setInterval(onInterval, 500, '홍길동');
 
-function onInterval(name) {
-	console.log(name + age++);
+console.clear();
+// Callback - Javascript 대표
+function expName(firstName, lastName, cb) {
+	var fullName = lastName + ' ' + firstName;
+	cb(fullName);
 }
+
+expName("덕규", "임", function(fullName){
+	console.log(fullName + " 입니다.");
+});
+
+/*
+function animate(values, speed, type, cb) {
+	var now = 0;
+	var last = imgs.length;
+	cb();
+}
+
+$(".slide").stop().animate({}, 500, "linear", function(){
+
+})
+*/
+
+console.clear();
+//콜백의 문제점
+var url = "https://8oi9s0nnth.apigw.ntruss.com/corona19-masks/v1/storesByGeo/json?lat=37.497986&lng=127.027533&m=1000";
+
+var result;
+$.get(url, function(res) {
+	result = res;
+	console.log(result);
+	expName("덕규", "임", function(fullName){
+		console.log(fullName + " 입니다.");
+		expName(fullName, "ㅎㅎㅎ", function(fallName) {
+			console.log(fullName);
+		});
+	});
+});
 </script>
