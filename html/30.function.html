@@ -1,0 +1,43 @@
+<script>
+// IIFE - Immediately Invoked Function Expression
+(function () {
+	var a = 10;
+	function localFn() {
+		a = 20;
+		console.log(a);
+	}
+
+	localFn();
+	console.log(a);
+})();
+
+
+var b = 10;	//Global Variable 전역변수
+console.log(b);
+console.log(window.b);
+
+function c(str) {
+	return str + str;
+}
+console.log(c);
+console.log(window.c);
+
+// 아마도 window객체는 아래와 같이 생겼을 것이다.
+var window = {
+	alert: function(str) {
+		// 경고창을 띄우는 코드
+	},
+	b: 10,
+	c: function(str) {
+		return str + str;
+	}
+}
+
+// Callback - Javascript 대표
+var age = 26;
+var interval = setInterval(onInterval, 500, '홍길동');
+
+function onInterval(name) {
+	console.log(name + age++);
+}
+</script>
