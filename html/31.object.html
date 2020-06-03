@@ -61,11 +61,27 @@ var Car = (function(){
 		this.weight = weight;
 		this.color = color;
 	}
+	Car.prototype.start = function() {
+		console.log(this.type + '가 시동을 겁니다.');
+	}
+	Car.prototype.drive = function() {
+		console.log(this.type + '가 달립니다.');
+	}
+	Car.prototype.break = function() {
+		console.log(this.type + '가 멈춥니다.');	
+	}
+	Car.prototype.stop = function() {
+		console.log(this.type + '가 시동을 끕니다.');
+	}
 	return Car;
 })();
 
 var fiat = new Car('fiat', '500', '850kg', 'white');
 var sonata = new Car('sonata', 'NF', '1050kg', 'black');
-console.log(fiat.model);
+console.log(fiat);
+fiat.start();
+fiat.drive();
 console.log(sonata.model);
+sonata.start();
+sonata.drive();
 </script>
