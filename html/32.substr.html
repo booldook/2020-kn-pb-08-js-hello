@@ -1,3 +1,41 @@
 <script>
-	
+var str = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam dolore, nesciunt ipsa nostrum enim eos facere nemo recusandae, ipsum quisquam aspernatur, voluptatibus obcaecati. Maxime, provident nulla numquam ad dolorem laboriosam!';
+var str2 = 'Lorem, ipsum';
+
+console.log(	strCut(str, 20)	);
+console.log(	strCut(str2, 20)	);
+
+function strCut(str, len) {
+	return (str.length > len) ? str.substr(0, 17) + '...' : str;
+}
+
+
+console.log(	new String(str)	=== str	);
+console.log(	new String(str)	== str	);
+console.log(	new String(str).length	);
+console.log(	str.length	);
+console.log(	new String(str)[5]	);
+console.log(	str[5]	);
+console.log(	new String(str).substr(100)	);
+console.log(	str.substr(100)	);
+
+
+String.prototype.strcut = function(len){
+	return (this.length > len) ? this.substr(0, 17) + '...' : this;
+}
+
+console.log(		strCut(str, 20)		);
+console.log(		str2.strcut(20)		);
+
+/*
+var String = (function(){
+	function String() {
+
+	}
+	String.prototype.substr = function(sIdx, len){
+
+	}
+	return String;
+})();
+*/
 </script>
