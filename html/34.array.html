@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Array</title>
+</head>
+<body>
+	<div class="wrapper" style="max-width: 1200px; margin: auto;"></div>
+	<script>
+	var arr = ['A', 'B', 'C', 'D', 'E'];
+	
+	var html = '<ul>';
+	for(var i=0; i<arr.length; i++) {
+		html += '<li style="border-bottom: 1px solid blue;">'+arr[i]+'</li>';
+	}
+	html += '</ul>';
+	document.getElementsByClassName("wrapper")[0].innerHTML = html;
+
+	var html  = '<ul>';
+	arr.forEach(createTag);
+	html += '</ul>';
+	document.getElementsByClassName("wrapper")[0].innerHTML += html;
+
+	function createTag(v, i) {
+		html += '<li style="border-bottom: 1px solid red;">'+arr[i]+'</li>'; 
+	}
+
+	arr.forEach(function(v, i) {
+		html += '<li style="border-bottom: 1px solid red;">'+arr[i]+'</li>'; 
+	});
+
+	/*
+	var arr = new Array();
+	var Array = (function(){
+		function Array() {
+			this.length = 0;
+		}
+		Array.prototype.push = function(v){
+			this[this.length-1] = v;
+		}
+		Array.prototype.forEach = function(cb){
+			var obj = {};
+			for(var i=0; i<this.length; i++){
+				obj.value = this[i]; 
+				obj.index = i;
+				obj.proto = this;
+				cb(obj.value, obj.index, obj.proto); 
+			} 
+		}
+		return Array;
+	})();
+	*/
+	</script>
+</body>
+</html>
