@@ -1,0 +1,30 @@
+<script>
+var d = new Date();
+console.log(d);
+
+// ISO 표기법
+// 2020-06-04 11:36:52
+
+// substr(), replace()
+var now = '2020-06-04 11:36:52';
+console.log(	now.substr(0, 10)	);
+var koNow = now.substr(0, 4) + "년 " + now.substr(5, 2) + "월 " + now.substr(8, 2) + "일";
+var koNow2 = now.substr(0, 10).replace("-", "년 ").replace("-", "월 ") + "일";
+console.log(koNow); 	//2020년 06월 04일
+console.log(koNow2); 	//2020년 06월 04일
+
+// split()
+var tmp = now.substr(0, 10).split('-');	// ['2020', '06', '04']
+var koNow3 = tmp[0] + "년 " + tmp[1] + "월 " + tmp[2] + "일";
+console.log(koNow3); 	//2020년 06월 04일
+
+// concat()
+var newStr = tmp[0].concat('-', tmp[1]).concat('-', tmp[2]);
+var newStr2 = tmp[0] + '-' + tmp[1] + '-' + tmp[2];
+console.log(newStr);
+console.log(newStr2);
+
+// trim()
+var str = "       Hello World!        ";
+console.log(str.trim());
+</script>
