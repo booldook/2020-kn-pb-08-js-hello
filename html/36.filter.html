@@ -1,0 +1,33 @@
+<script>
+var users = [
+	{name: "홍길동", age: 25, kor: 95, eng: 80},
+	{name: "홍길순", age: 35, kor: 45, eng: 78},
+	{name: "홍길만", age: 27, kor: 58, eng: 60},
+	{name: "홍길룡", age: 33, kor: 72, eng: 39},
+	{name: "홍길이", age: 37, kor: 99, eng: 52},
+	{name: "홍길삼", age: 42, kor: 82, eng: 95},
+	{name: "홍길오", age: 45, kor: 87, eng: 98},
+];
+
+var ageOver30 = users.filter(function(v){
+	if(v.age >= 30) return v;
+});
+console.log(ageOver30);
+
+var korUnder60 = users.filter(function(v){
+	if(v.kor < 60) return v;
+});
+console.log(korUnder60);
+
+// 60점 이하의 과락이 없고, 총점이 140점 이상인 합격자를 추출하시오.
+var certUsers = users.filter(function(v) {
+	if(v.kor>=60 && v.eng >= 60 && v.kor + v.eng >= 140) return v;
+});
+console.log(certUsers);
+
+// 60점 이하의 과락이 있거나, 총점이 140점 이하인 불합격자를 추출하시오.
+var failUsers = users.filter(function(v) {
+	if(v.kor < 60 || v.eng < 60 || v.kor + v.eng < 140) return v;
+});
+console.log(failUsers);
+</script>
