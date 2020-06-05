@@ -69,4 +69,30 @@ console.log(newUsers);
 
 
 /*************** reduce() ****************/
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var hap = 0;
+numbers.forEach(function(v){
+	hap += v;
+});
+console.log(hap);
+
+// forEach, filter, map => filter(function(v, i, a) {return}) 
+// reduce 							=> reduce(function(t, v, i, a) {return}, t초기값 );  
+
+var hap = numbers.reduce(function(t, v, i, a) {
+	return t + v;
+});
+console.log(hap);	// 55
+
+var hap = numbers.reduce(function(t, v, i, a) {
+	return t + v;
+}, 1000);
+console.log(hap);	// 1055 -> reduce함수의 두번째 인자는 t의 초기값이다(t = 1000), 단 객체가 인자일 경우에는 0을 기본값으로 넣어준다.
+
+
+// users의 kor의 합을 구하시오.
+var korSum = users.reduce(function(t, v) {
+	return t + v.kor;
+}, 0);
+console.log(korSum);
 </script>
