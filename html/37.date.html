@@ -1,0 +1,36 @@
+<script>
+var months = ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
+var weeks = ['일', '월', '화', '수', '목', '금', '토'];
+d = new Date();
+console.log(d);
+console.log(	Number(d)	);
+console.log(	d.getFullYear()	);				// 년도 4글자
+console.log(	d.getMonth()	);					// 월 0 ~ 11
+console.log(	months[d.getMonth()]	);	
+console.log(	d.getDay()	);						// 요일 0 ~ 6 (0:sun ~ 6:sat)
+console.log(	d.getDate()	);						// 일 1 ~ 31
+console.log(	weeks[d.getDate()]	);
+console.log(	d.getHours()	);					// 시
+console.log(	d.getMinutes()	);				// 분
+console.log(	d.getSeconds()	);				// 초
+
+function isoDate(date) {
+	// 2020-06-05 16:10:08
+
+	function zp(n) {
+		return n > 9 ? n : '0'+n;
+	}
+
+	var d = date || new Date();
+	var iso = '';
+	iso += d.getFullYear() + '-';
+	iso += zp(d.getMonth() + 1) + '-';
+	iso += zp(d.getDate()) + ' ';
+	iso += zp(d.getHours()) + ':';
+	iso += zp(d.getMinutes()) + ':';
+	iso += zp(d.getSeconds());
+	return iso; 
+}
+
+console.log(	isoDate()	);
+</script>
