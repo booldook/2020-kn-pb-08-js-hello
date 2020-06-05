@@ -95,4 +95,30 @@ var korSum = users.reduce(function(t, v) {
 	return t + v.kor;
 }, 0);
 console.log(korSum);
+
+
+// every() - 모든 요소를 평가하여 true or false 리턴
+var over30 = users.every(function(v) {
+	return v.age >= 10;
+});
+console.log(over30);
+
+
+// indexOf() - 배열에 일치하는 데이터가 있는지 검색 -> 존재하는 데이터의 index를 리턴, 없으면 -1 리턴
+
+var search = '홍길만';
+
+var members = ['홍길만', '홍길동', '홍길이'];
+var result = members.indexOf(search);
+console.log(result);	// 0
+
+var result = users.some(function(v){
+	return v.name.indexOf(search) > -1;
+});
+console.log(result);	// true
+
+var result = users.filter(function(v){
+	return v.name.indexOf(search) > -1;
+});
+console.log(result);	// [{name: '홍길만'...}]
 </script>
