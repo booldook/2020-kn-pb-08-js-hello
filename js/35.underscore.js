@@ -2,10 +2,26 @@ var lotto = [];
 for(var i=0; i<45; i++) lotto.push(i+1);
 
 function onNumbers() {
+	/*
 	var getLotto = [];
-	// 여기가 추출알고리즘 [22, 16, 33, 34, 1, 9]
+	for(var i=0; i<1000; i++) {
+		var idx = Math.floor(Math.random() * 45);
+		if(getLotto.indexOf(lotto[idx]) == -1) {
+			getLotto.push(lotto[idx]);
+			if(getLotto.length == 6) break;
+		}
+	}
+	var getLotto = lotto
+	.sort(function(a, b) {
+		return 0.5 - Math.random()
+	})
+	.slice(0, 6)
+	.sort(function(a, b) {
+		return a - b
+	});
+	*/
+	var getLotto = _.sortBy(_.sample(lotto, 6));
 	
-	console.log(getLotto);
 }
 
 $(".bt-lotto").click(onNumbers);
