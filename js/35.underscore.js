@@ -20,30 +20,22 @@ function onNumbers() {
 		return a - b
 	});
 	*/
-	var getLotto = _.sortBy(_.sample(lotto, 6));
-	
+	var html = lottoMaker(	_.sortBy(_.sample(lotto, 6))	);
+	$(".lotto-wrap").prepend(html);
 }
 
 $(".bt-lotto").click(onNumbers);
 
 
-
-
-
-
-
-
-
-
-
 function lottoMaker(arr) {
-var html = '';
-	/* <li class="lotto">
-	<span class="yellow">1</span>
-	<span class="blue">13</span>
-	<span class="red">26</span>
-	<span class="gray">33</span>
-	<span class="green">42</span>
-	<span class="green">44</span>
-	</li> */
+	var html = '<li class="lotto">';
+	for(var i=0; i<6; i++) {
+		if(arr[i] <= 10) html += '<span class="yellow">'+arr[i]+'</span>';
+		else if(arr[i] <= 20) html += '<span class="blue">'+arr[i]+'</span>';
+		else if(arr[i] <= 30) html += '<span class="red">'+arr[i]+'</span>';
+		else if(arr[i] <= 40) html += '<span class="gray">'+arr[i]+'</span>';
+		else html += '<span class="green">'+arr[i]+'</span>';
+	}
+	html += '</li>';
+	return html;
 }

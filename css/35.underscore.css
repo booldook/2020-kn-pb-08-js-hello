@@ -2,7 +2,7 @@
 .title {padding: 2rem; background-color: lightcyan; border-radius: 16px; color: #0c3475;}
 .bt-lotto {margin: 1rem; padding: 1rem 2rem; color: #fff; background-color: #2f496b; border: none; border-radius: 8px; font-size: 1.5rem; cursor: pointer;}
 .lotto-wrap {padding: 1rem;}
-.lotto > span {display: inline-block; font-size: 2rem; width: 64px; height: 64px; border-radius: 50%; line-height: 60px; color: #fff; text-shadow: 0 0 3px rgba(0,0,0,0.5);}
+.lotto > span {display: inline-block; font-size: 2rem; width: 64px; height: 64px; border-radius: 50%; line-height: 60px; color: #fff; text-shadow: 0 0 3px rgba(0,0,0,0.5); margin: 0.5rem;}
 .lotto > .yellow {background-image: 
 	radial-gradient(farthest-corner at 20px 15px, #fce390 0, #f3be11 50%, #705704 95%);}
 .lotto > .blue {background-image: 
