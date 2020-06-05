@@ -1,9 +1,11 @@
+<script src="../js/moment.min.js"></script>
 <script>
 var months = ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
 var weeks = ['일', '월', '화', '수', '목', '금', '토'];
 d = new Date();
 console.log(d);
-console.log(	Number(d)	);
+console.log(	Number(d)	);							// timestamp
+console.log(	d.getTime()	);						// timestamp
 console.log(	d.getFullYear()	);				// 년도 4글자
 console.log(	d.getMonth()	);					// 월 0 ~ 11
 console.log(	months[d.getMonth()]	);	
@@ -33,4 +35,5 @@ function isoDate(date) {
 }
 
 console.log(	isoDate()	);
+console.log(	moment().format('YYYY-MM-DD HH:mm:ss')	);
 </script>
