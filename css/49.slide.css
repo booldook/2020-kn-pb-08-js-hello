@@ -1,7 +1,7 @@
 .slide-wrapper {background-color: #ccc;}
-.slide-stage {position: relative; max-width: 720px; margin: auto;}
-.slide-wrap {position: relative; left: -100%; display: flex; width: 300%;}
-.slide {flex: 33.3333% 0 0;}
+.slide-stage {position: relative; max-width: 1200px; margin: auto; overflow: hidden;}
+.slide-wrap {position: relative; left: -20%; display: flex; width: 140%;}
+.slide {flex: 14.2857% 0 0;}
 
 .bt {position: absolute; color: #fff; font-size: 8rem; top: calc(50% - 6rem); cursor: pointer; z-index: 60000; user-select: none;}
 .bt-prev {left: 2rem;}

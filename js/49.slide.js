@@ -2,7 +2,7 @@ var now = 0;
 var tar = 0;
 var el = $(".slide");
 var last = el.length - 1;
-var arr = [3,4,5];
+var arr = [];
 
 for(var i=0; i<el.length; i++) {
 	$(".pager-wrap").append('<i class="pager fa-circle"></i> ');
@@ -15,12 +15,14 @@ $(".pager").click(onPager);
 init();
 
 function init() {
-	$(".slide-wrap").css("left", "-100%");
+	$(".slide-wrap").css("left", "-20%");
 	$(".slide").remove();
 	arr = [];
 	arr[1] = now;
 	arr[0] = (now == 0) ? last : now - 1;
-	arr[2] = (now == last) ? 0 : now + 1;
+	for(var i=2; i<el.length; i++) {
+		arr[i] = (arr[i-1] == last) ? 0 : arr[i-1] + 1;
+	}
 	for(var i in arr) {
 		$(el[arr[i]]).clone().appendTo(".slide-wrap");
 	}
@@ -36,7 +38,7 @@ function onPrev() {
 
 function onNext() {
 	now = (now == last) ? 0 : now + 1;
-	tar = "-200%";
+	tar = "-40%";
 	ani();
 }
 
