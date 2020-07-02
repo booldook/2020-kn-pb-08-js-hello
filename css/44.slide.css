@@ -1,0 +1,4 @@
+.slide-wrapper {background-color: #ccc;}
+.slide-stage {position: relative; width: 720px; height: 380px; margin: auto; overflow: hidden;}
+.slide-wrap {position: relative;}
+.slide {width: 720px;}
