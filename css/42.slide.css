@@ -1,5 +1,5 @@
 .slide-wrapper {background-color: #ccc;}
-.slide-stage {position: relative; max-width: 720px; margin: auto; border: 3px solid red;}
+.slide-stage {position: relative; max-width: 720px; margin: auto; overflow: hidden;}
 .slide-wrap {position: relative; width: 5040px; display: flex;}
 .slide {width: 720px;}
 
