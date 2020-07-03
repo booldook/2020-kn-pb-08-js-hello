@@ -1,0 +1,10 @@
+.slide-stage {max-width: 1600px; margin: auto; position: relative;}
+.slide.active {width: 100%; position: absolute; top: 0; left: 0; opacity: 0;}
+
+
+
+.bt {position: absolute; color: #fff; font-size: 8rem; top: calc(50% - 6rem); cursor: pointer; z-index: 10; user-select: none;}
+.bt-prev {left: 2rem;}
+.bt-next {right: 2rem;}
+.pager-wrap {position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); color: #fff;}
+.pager {cursor: pointer; user-select: none;}
