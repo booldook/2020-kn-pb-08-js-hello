@@ -1,10 +1,45 @@
+/*
+화면에 보여질 슬라이드 갯수에 따른 값
+- 5개
+.slide-wrap {left: -20%; width: 140%;} 
+.slide {flex: 14.2857% 0 0;} 
+- 4개
+.slide-wrap {left: -25%; width: 150%;} 
+.slide {flex: 16.6666% 0 0;} 
+- 3개
+.slide-wrap {left: -33.3333%; width: 166.6666%;} 
+.slide {flex: 20% 0 0;} 
+- 2개
+.slide-wrap {left: -50%; width: 200%;} 
+.slide {flex: 25% 0 0;} 
+- 1개
+.slide-wrap {left: -100%; width: 300%;} 
+.slide {flex: 33.3333% 0 0;} 
+*/
+
+
 .slide-wrapper {background-color: #ccc;}
-.slide-stage {position: relative; max-width: 720px; margin: auto;}
-.slide-wrap {position: relative; left: -100%; display: flex; width: 300%;}
-.slide {flex: 33.3333% 0 0;}
+.slide-stage {position: relative; max-width: 720px; margin: auto; border: 10px solid red;}
+.slide-wrap {position: relative; display: flex; left: -25%; width: 150%;}
+.slide {flex: 16.6666% 0 0;}
 
 .bt {position: absolute; color: #fff; font-size: 8rem; top: calc(50% - 6rem); cursor: pointer; z-index: 60000; user-select: none;}
 .bt-prev {left: 2rem;}
 .bt-next {right: 2rem;}
 .pager-wrap {position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); color: #fff;}
 .pager {cursor: pointer; user-select: none;}
+
+@media screen and (max-width: 991px) {
+	.slide-wrap {left: -33.3333%; width: 166.6666%;} 
+	.slide {flex: 20% 0 0;} 
+}
+
+@media screen and (max-width: 767px) {
+	.slide-wrap {left: -50%; width: 200%;} 
+	.slide {flex: 25% 0 0;} 
+}
+
+@media screen and (max-width: 576px) {
+	.slide-wrap {left: -100%; width: 300%;} 
+	.slide {flex: 33.3333% 0 0;} 
+}
