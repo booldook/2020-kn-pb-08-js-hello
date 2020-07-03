@@ -1,4 +1,5 @@
 var now = 0;
+var speed = 500;
 var root = $(".gum-fade");
 var el = $(".slide", root);
 var last = el.length - 1;
@@ -12,7 +13,7 @@ init();
 
 function init() {
 	$(".slide", root).remove();
-	$(el[now]).clone().appendTo($(".slide-stage", root));
+	$(el[now]).clone().prependTo($(".slide-stage", root));
 	$(".pager", root).removeClass("fa").addClass("far");
 	$(".pager", root).eq(now).removeClass("far").addClass("fa");
 }
@@ -28,6 +29,15 @@ function onNext() {
 }
 
 function onPager() {
-	now = $(".pager", root).index();
+	now = $(this).index();
 	ani();
+}
+
+function ani() {
+	$(el[now])
+	.clone()
+	.addClass("active")
+	.prependTo($(".slide-stage", root))
+	.stop()
+	.animate({"opacity": 1}, speed, init);
 }
