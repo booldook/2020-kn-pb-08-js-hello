@@ -1,6 +1,27 @@
 .slide-stage {max-width: 1600px; margin: auto; position: relative;}
-.slide.active {width: 100%; position: absolute; top: 0; left: 0; opacity: 0;}
+.slide.active {width: 100%; position: absolute; top: 0; left: 0; opacity: 0; z-index: 5;}
 
+.slogan {position: absolute; width: 50%; top: 50%; transform: translateY(-50%); padding: 2rem 3rem; background-color: #00000000; animation-name: slogan;  animation-fill-mode: forwards; animation-duration: 0.8s; animation-delay: 1s;}
+.slogan .title {font-size: 5rem; color: #fff; font-weight: bold; text-shadow: 0 0 10px rgba(0,0,0,0.5); opacity: 0; animation-name: title; animation-fill-mode: forwards; animation-duration: 0.7s; animation-delay: 1.6s;}
+.slogan .cont {font-size: 1.5rem; color: #fff; line-height: 1.2; opacity: 0; animation-name: cont; animation-fill-mode: forwards; animation-duration: 0.8s; animation-delay: 2s;}
+.slogan.lt {text-align: left; left: 12%;}
+.slogan.ct {text-align: center; left: 25%;}
+.slogan.rt {text-align: right; right: 12%;}
+
+@keyframes slogan {
+	0% {transform: scaleX(3) translateY(-50%); background-color: rgba(0,0,0,0);}
+	100% {transform: scaleX(1) translateY(-50%); background-color: rgba(0,0,0,0.7);}
+}
+
+@keyframes title {
+	0% {transform: scale(3) translateY(-200%); opacity: 0;}
+	100% {transform: scale(1) translateY(0); opacity: 1;}
+}
+
+@keyframes cont {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
 
 
 .bt {position: absolute; color: #fff; font-size: 8rem; top: calc(50% - 6rem); cursor: pointer; z-index: 10; user-select: none;}

@@ -3,11 +3,18 @@ var speed = 500;
 var root = $(".gum-fade");
 var el = $(".slide", root);
 var last = el.length - 1;
+var interval;
 
 for(var i=0; i<el.length; i++) $(".pager-wrap", root).append('<i class="pager fa-circle"></i> ');
 $(".bt-prev", root).click(onPrev);
 $(".bt-next", root).click(onNext);
 $(".pager", root).click(onPager);
+interval = setInterval(onNext, 4000);
+$(root).hover(function(){
+	clearInterval(interval);
+}, function(){
+	interval = setInterval(onNext, 4000);
+});
 
 init();
 
