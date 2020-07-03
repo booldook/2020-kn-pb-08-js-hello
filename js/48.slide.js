@@ -32,6 +32,10 @@
 		}
 		$(".pager", root).removeClass("fa").addClass("far");
 		$(".pager", root).eq(now).removeClass("far").addClass("fa");
+		/* 슬라이딩 후 애니메이션 */
+		setTimeout(function(){
+			$(".slide", root).eq(1).find(".title").addClass("active");
+		}, 0);
 	}
 	
 	function onPrev() {

@@ -20,7 +20,10 @@
 .slide-wrapper {background-color: #000;}
 .slide-stage {position: relative; max-width: 1600px; margin: auto; overflow: hidden;}
 .slide-wrap {position: relative; display: flex; left: -25%; width: 150%;}
-.slide {flex: 16.6666% 0 0;}
+.slide {flex: 16.6666% 0 0; position: relative;}
+.slide .title {color: red; font-size: 5rem; font-weight: bold; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(2); opacity: 0; transition: all 1s;}
+.slide .title.active {transform: translate(-50%, -50%) scale(1); opacity: 1;}
+
 
 .bt {position: absolute; color: #fff; font-size: 8rem; top: calc(50% - 6rem); cursor: pointer; z-index: 10; user-select: none;}
 .bt-prev {left: 2rem;}
