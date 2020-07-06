@@ -1,0 +1,3 @@
+.wrapper {max-width: 1600px; min-height: 200px; margin: auto; border: 10px solid red; position: relative;}
+.wrapper > div { position: relative;}
+.wrapper > div > .fa-spin { position: absolute; top: calc(50% - 24px); left: calc(50% - 24px);}
