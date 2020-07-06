@@ -6,17 +6,17 @@ el.addEventListener("touchcancel", handleCancel, false);
 el.addEventListener("touchmove", handleMove, false);
 
 function handleStart() {
-	console.log("handleStart");	
+	console.log(event.changedTouches[0].pageX);	
 }
 
 function handleEnd() {
-	console.log("handleEnd");	
-}
-
-function handleCancel() {
-	console.log("handleCancel");	
+	console.log(event.changedTouches[0].pageX);	
 }
 
 function handleMove() {
-	console.log("handleMove");	
+	console.log(event.changedTouches[0].pageX);	
+}
+
+function handleCancel() {
+	console.log(event);	
 }
