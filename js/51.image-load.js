@@ -6,15 +6,16 @@ $(window).resize(onResize).trigger("resize");
 $(".wrapper").imagesLoaded(onResize);
 */
 
-$("img").each(function(){
+/* $("img").each(function(i){
 	$(this).parent().append('<i class="fa fa-spin fa-spinner fa-2x"></i>');
+}); */
+
+
+
+// callback
+function hap(x, y, fn) {
+	fn(x + y);
+}
+hap(10, 20, function(hap){
+	console.log(hap);
 });
-
-for(var i=0; i<$("img").length; i++) {
-	$("img").eq(i).parent().append('<i class="fa fa-spin fa-spinner fa-2x"></i>');
-}
-
-$(".wrapper > div").imagesLoaded(onImagesLoaded);
-function onImagesLoaded() {
-	$(this).find(".fa-spin").hide();
-}
