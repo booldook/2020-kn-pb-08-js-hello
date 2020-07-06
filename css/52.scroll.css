@@ -1,0 +1,10 @@
+.page {color: #fff; font-size: 50px; display: flex; justify-content: center; align-items: center;}
+.page1 {background-color: darkorchid; height: 100vh}
+.page2 {background-color: deeppink; height: 120vh}
+.page3 {background-color: dodgerblue; height: 70vh}
+.page4 {background-color: forestgreen; height: 80vh}
+.page5 {background-color: goldenrod; height: 150vh}
+
+.logo, .nav-link {cursor: pointer;}
+.nav-link.active,
+.nav-link.active:hover {color: #fac768;}
