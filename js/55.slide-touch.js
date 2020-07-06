@@ -18,6 +18,17 @@ function ani() {
 	$(".slide-wrap").stop().animate({"left": tar+"px"}, 300);
 }
 
+$(".slide-wrap").swipe({
+	swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+		if(direction == "left" && distance > 100 && now < 6) onNext();
+		if(direction == "right" && distance > 100 && now > 0) onPrev();  
+	}
+});
+
+
+
+
+/*
 var el = $(".slide-wrap")[0];
 var touchStart, touchEnd, touchMove, touchGap, touchDirection
 el.addEventListener("touchstart", handleStart, false);
@@ -47,5 +58,5 @@ function handleMove() {
 function handleCancel() {
 	console.log(event);	
 }
-
+*/
 
